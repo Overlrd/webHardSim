@@ -1,7 +1,10 @@
 /* webHardSim is a Behavioral simualtor for logic gate */
 function assert(expression, errMessage) {
-    if (!expression) console.error(errMessage);
-    return;
+    if (!expression) {
+        console.error(errMessage)
+        return 1;
+    };
+    return 0;
 }
 
 function AND(a, b) {
@@ -49,4 +52,4 @@ function Multi(chip) {
     return evaluate;
 }
 
-export { assert, AND, NOT, NAND, OR, XOR, Multi };
+module.exports = { assert, AND, NOT, NAND, OR, XOR, Multi };

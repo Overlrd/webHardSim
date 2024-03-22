@@ -1,0 +1,55 @@
+{
+  "OR": {
+    "inputs": ["a", "b"],
+    "output": "out",
+    "description": "return 1 if one of the inputs or both is/are one",
+    "table": [
+      {"a": 0, "b": 0, "out": 0},
+      {"a": 0, "b": 1, "out": 1},
+      {"a": 1, "b": 0, "out": 1},
+      {"a": 1, "b": 1, "out": 1}
+    ]
+  },
+  "AND": {
+    "inputs": ["a", "b"],
+    "output": "out",
+    "description": "return 1 if both of the inputs are 1",
+    "table": [
+      {"a": 0, "b": 0, "out": 0},
+      {"a": 0, "b": 1, "out": 0},
+      {"a": 1, "b": 0, "out": 0},
+      {"a": 1, "b": 1, "out": 1}
+    ]
+  },
+  "NOT": {
+    "inputs": ["in"],
+    "output": "out",
+    "description": "return 1 if input is 0 else 0",
+    "table": [
+      {"in": 0, "out": 1},
+      {"in": 1, "out": 0}
+    ]
+  },
+  "XOR": {
+    "inputs": ["a", "b"],
+    "output": "out",
+    "description": "Exclusive OR ,return return 1 if one and only one of the inputs is 1",
+    "table": [
+      {"a": 0, "b": 0, "out": 0},
+      {"a": 0, "b": 1, "out": 1},
+      {"a": 1, "b": 0, "out": 1},
+      {"a": 1, "b": 1, "out": 0}
+    ]
+  },
+  "NAND": {
+    "inputs": ["a", "b"],
+    "output": "out",
+    "description": "NOT AND, return return 1 if both of the inputs are 1 else 0",
+    "table": [
+      {"a": 0, "b": 0, "out": 1},
+      {"a": 0, "b": 1, "out": 1},
+      {"a": 1, "b": 0, "out": 1},
+      {"a": 1, "b": 1, "out": 0}
+    ]
+  }
+}
